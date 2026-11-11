@@ -1,0 +1,10 @@
+# PyInstaller build artifacts
+build/
+dist/
+__pycache__/
+*.pyc
+
+# Local user binaries & packages
+*.exe
+*.zip
+*.rar

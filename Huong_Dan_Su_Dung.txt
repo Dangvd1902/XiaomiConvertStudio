@@ -1,0 +1,38 @@
+=============================================================================
+             XIAOMI CONVERT ROM STUDIO (X-CONVERT v1.0)
+     Tool Chuyên Dụng Tự Động Tạo Bản ROM Convert Quốc Tế / Đài Loan
+=============================================================================
+
+1. GIỚI THIỆU:
+   Tool giúp tự động hóa 100% quy trình tạo bản ROM Convert chạy qua EDL 9008
+   cho các dòng máy Xiaomi (Snapdragon 8 Gen 2 / 8 Gen 3 như Redmi K70 vermeer,
+   K60, K50, Xiaomi 14/13, v.v.).
+
+2. CÁC TÍNH NĂNG CHUYÊN SÂU TỰ ĐỘNG:
+   - Tự động vá bảng phân vùng GPT (opconfig -> opcust) và tính lại toàn bộ mã
+     CRC32 phân vùng & GPT Header theo chuẩn Qualcomm UFS 4.0 / eMMC.
+   - Tự động đồng bộ các phân vùng Slot A sang Slot B trong rawprogram2.xml và
+     rawprogram4.xml (Ngăn ngừa tuyệt đối nguy cơ brick khi cập nhật OTA chuyển slot).
+   - Bảo vệ an toàn 100% phân vùng Persist & EFS (Không lo mất IMEI, mất vân tay
+     hay lỗi cảm biến).
+   - Tự động nhúng Firehose No-Auth để vượt quyền bảo mật khi nạp EDL 9008 không cần
+     tài khoản ủy quyền Xiaomi (Authorized Account).
+   - Tối ưu tốc độ Build siêu tốc bằng cơ chế NTFS HardLink: Tạo toàn bộ bản ROM 15GB
+     chỉ mất từ 1 đến 3 giây mà không tốn thêm dung lượng ổ cứng.
+   - Tự động tạo gói nạp lẻ FIX_OTA (Chỉ nạp opcust, misc, GPT cho máy đã có ROM).
+   - Tự động tích hợp bộ kịch bản 1-Click chuyển đổi linh hoạt:
+     + 1_Chon_Nang_Cap_GIU_DU_LIEU.bat (Không wipe dữ liệu).
+     + 2_Chon_Flash_Sach_XOA_DU_LIEU.bat (Flash sạch xóa sạch dữ liệu).
+
+3. HƯỚNG DẪN SỬ DỤNG:
+   Bước 1: Chạy file XiaomiConvertStudio.exe
+   Bước 2:
+     - [Thư mục ROM Đích]: Chọn thư mục ROM Fastboot Quốc tế hoặc Đài Loan (TGz đã giải nén).
+     - [Firehose No-Auth]: Chọn file .elf hoặc .melf không cần auth (VD: xiaomi_8550_firehose_noauth.melf).
+     - [Thư mục ROM ENG] (Tùy chọn): Nếu có ROM Factory ENG, chọn thư mục này tool sẽ tự động
+       nhận diện và trích xuất loader Firehose nếu chưa có.
+   Bước 3: Chọn Khu vực (Đài Loan TW có ghi âm cuộc gọi tự động không thông báo, hoặc Global).
+   Bước 4: Bấm "BẮT ĐẦU TẠO ROM CONVERT (1-CLICK)".
+   Bước 5: Sau 3 giây, ROM Convert hoàn chỉnh đã sẵn sàng trong thư mục xuất!
+
+=============================================================================
